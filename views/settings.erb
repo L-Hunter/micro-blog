@@ -1,0 +1,17 @@
+<h2>Settings</h2>
+
+<p>Edit Your Information: </p>
+<form method="POST" action="/users/<%= @user.id %>/update">
+	<label for="name">Name:</label>
+	<input type="text" name="name"  placeholder="<%= @user.name %>" value="<%= @user.name %>">
+	<label for="email">Email: </label>
+	<input type="text" name="email" placeholder="<%= @user.email %>" value="<%= @user.email %>">
+	<label for="password">Password: </label>
+	<input type="text" name="password" placeholder="<%= @user.password %>" value="<%= @user.password %>">
+	<input type="submit">
+</form>
+
+<p>Delete Account: </p>
+<form method="POST" action="/users/<%= @user.id %>/delete">
+	<input type="submit" value="Farewell">
+</form>

@@ -35,8 +35,17 @@ post '/users/create' do
 end
 
 #get edit
+get '/users/:id/edit' do
+	@user = User.find(params['id'])
+	erb :settings
+end
 
 #post update
+post '/users/:id/update' do
+	@user = User.find(params['id'])
+	@user.update(name: params['name'], email: params['email'], password: params['password'])
+	redirect "/users/#{@user.id}"
+end
 
 #destroy
 post '/users/:id/delete' do
