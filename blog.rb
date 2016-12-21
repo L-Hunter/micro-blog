@@ -5,6 +5,7 @@ require 'sinatra/flash'
 require './models.rb'
 
 set :database, "sqlite3:test.sqlite3"
+enable :sessions
 
 get '/' do
 	erb :home
@@ -15,11 +16,25 @@ get '/users/new' do
 	erb :newuser
 end
 
-#get signin page
-
+#get signin page - add form to home.erb
 #post login
+post '/login' do
+	@user = User.where(email: params['email']).first
+	if @user && @user.password == params['password']
+		session[:user_id] = @user.id
+		flash[:notice] = "Welcome!"
+		redirect "/users/#{session[:user_id]}"
+	else
+		flash[:alert] = "Please, try again."
+		redirect '/'
+	end
+end
 
 #post logout
+post '/logout' do
+	session[:user_id] = nil
+	redirect '/'
+end
 
 #read - profile page
 get '/users/:id' do
