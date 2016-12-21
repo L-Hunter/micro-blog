@@ -6,3 +6,8 @@
 <p>Email: <%= @user.email %></p>
 <p>Password: <%= @user.password %></p>
 <p>Id number: <%= @user.id %></p>
+
+<p>Delete Account: </p>
+<form method="POST" action="/users/<%= @user.id %>/delete">
+	<input type="submit" value="Farewell">
+</form>
