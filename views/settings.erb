@@ -13,5 +13,14 @@
 
 <p>Delete Account: </p>
 <form method="POST" action="/users/<%= @user.id %>/delete">
-	<input type="submit" value="Farewell">
+	<label>Delete: </label>
+	<input type="submit" value="Goodbye Forever">
+</form>
+
+<br>
+
+<p>Just looking to log out?</p>
+<form method="POST" action="/logout">
+	<label>Log Out: </label>
+	<input type="submit" value="Log Out">
 </form>

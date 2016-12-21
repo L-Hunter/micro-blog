@@ -8,6 +8,12 @@
 <p>Password: <%= @user.password %></p>
 <p>Id number: <%= @user.id %></p>
 
+
+<form method="POST" action="/logout">
+	<label>Log Out</label>
+	<input type="submit" value="Log Out">
+</form>
+
 <p><a href="/users/<%= @user.id %>/edit">Change your settings</a></p>
 <!-- <p>Delete Account: </p>
 <form method="POST" action="/users/<%= @user.id %>/delete">
