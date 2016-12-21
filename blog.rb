@@ -11,6 +11,9 @@ get '/' do
 end
 
 #get create new users
+get '/users/new' do
+	erb :newuser
+end
 
 #get signin page
 
@@ -18,9 +21,18 @@ end
 
 #post logout
 
-#read
+#read - profile page
+get '/users/:id' do
+	@user = User.find(params['id'])
+	erb :user
+end
 
 #create
+post '/users/create' do
+	@user = User.new(name: params['name'], email: params['email'], password: params['password'])
+	@user.save
+	redirect "/users/#{@user.id}"
+end
 
 #get edit
 
