@@ -1,6 +1,6 @@
 <h3>New Blog Post</h3>
 
-<form method="POST" action="/posts/create">
+<form method="POST" action="/posts/create/<%= @user.id %>">
 	<label for="title">Title: </label>
 	<input type="text" name="title"><br><br>
 	<label for="content">Content: </label>
