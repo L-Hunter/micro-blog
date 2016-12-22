@@ -8,9 +8,18 @@
 <p>Password: <%= @user.password %></p>
 <p>Id number: <%= @user.id %></p>
 
+<h3>Add a new <a href="/posts/new">post</a>.</h3>
+
+<h3><%= @user.name %>'s Posts</h3>
+<% @posts.each do |post| %>
+	<h2><%= @post.title %></h2>
+	<p><%= @post.content %></p>
+<% end %>
+
+
 
 <form method="POST" action="/logout">
-	<label>Log Out</label>
+	<label>Log Out </label>
 	<input type="submit" value="Log Out">
 </form>
 
