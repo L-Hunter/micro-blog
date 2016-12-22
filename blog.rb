@@ -39,7 +39,7 @@ end
 #read - profile page
 get '/users/:id' do
 	@user = User.find(params['id'])
-	@posts = @user.posts
+	# @posts = @user.posts
 	erb :user
 end
 
@@ -75,21 +75,24 @@ end
 #posting
 #get a user's posts
 get '/users/:id/posts' do
-	@user = User.find(params["id"])
+	@user = User.find(params["user_id"])
 	@posts = @user.posts
 	erb :"userposts"
 end
 
 #get new posts
-get '/posts/new' do
-	erb :"newpost"
+get '/posts/new/:user_id' do
+	@user = User.find(params["user_id"])
+	erb :newpost
 end
 
 #post create posts
-post '/posts/create' do
+post '/posts/create/:user_id' do
+	@user = User.find(params["user_id"])
 	@post = Post.new(title: params["title"], content: params["content"])
-	# @post.user_id = 1
+	@post.user_id = @user.id
 	@post.save
+	# redirect "/users/#{@user.id}"
 	redirect "/posts/#{@post.id}"
 end
 
