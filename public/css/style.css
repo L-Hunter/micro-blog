@@ -1,6 +1,34 @@
 body {
   padding: 0px;
-  background-color: #CDCDCD;
+  margin: 0;
+  background-color: #E9E9E9;
   color: #FFFFFF; }
+
+form {
+  color: #88BBD6; }
+
+h1 {
+  padding: 0px;
+  margin: 0 auto; }
+
+.nav-bar {
+  background-color: #99D3DF; }
+
+.wrapper {
+  width: 85%;
+  margin: 0 auto; }
+
+.about-user {
+  color: #88BBD6;
+  border-bottom: 1px solid #FA7C92; }
+
+.user-post-frame {
+  padding: 5px;
+  height: 200px; }
+
+.user-post {
+  padding: 20px;
+  border: 1px solid #99D3DF;
+  background-color: #CDCDCD; }
 
 /*# sourceMappingURL=style.css.map */

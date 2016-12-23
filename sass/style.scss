@@ -1,12 +1,49 @@
-$background-color: #CDCDCD;
+$background-color: #E9E9E9;
 $font-color: #FFFFFF;
 $tealish: #99D3DF;
 $blue: #88BBD6;
 $dark-gray: #CDCDCD;
 $pink: #FA7C92;
+$line: 1px solid;
 
 body {
 	padding: 0px;
+	margin: 0;
 	background-color: $background-color;
 	color: #FFFFFF;
+}
+
+form {
+	color: $blue;
+}
+
+h1 {
+	padding: 0px;
+	margin: 0 auto;
+}
+
+.nav-bar {
+	background-color: $tealish;
+}
+
+.wrapper {
+	width: 85%;
+	margin: 0 auto;
+}
+
+.about-user {
+	// background-color: $dark-gray;
+	color: $blue;
+	border-bottom: $line $pink
+}
+
+.user-post-frame {
+	padding: 5px;
+	height: 200px;
+}
+
+.user-post {
+	padding: 20px;
+	border: $line $tealish;
+	background-color: $dark-gray;
 }
