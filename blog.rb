@@ -107,7 +107,7 @@ get '/posts/:id' do
 	erb :post
 end
 
-#see all users' posts
+#see all users' posts and access links to user profile pages
 get '/posts' do
 	@users =User.all
 	@posts = Post.all
