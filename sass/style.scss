@@ -4,6 +4,7 @@ $tealish: #99D3DF;
 $blue: #88BBD6;
 $dark-gray: #CDCDCD;
 $pink: #FA7C92;
+$dark-blue: #4981CE;
 $line: 1px solid;
 
 body {
@@ -20,6 +21,10 @@ form {
 h1 {
 	padding: 0px;
 	margin: 0 auto;
+}
+
+a {
+	color: #FFFFFF;
 }
 
 .nav-bar {
@@ -47,3 +52,8 @@ h1 {
 	border: $line $tealish;
 	background-color: $dark-gray;
 }
+
+.post-title {
+	color: $dark-blue;
+}
+

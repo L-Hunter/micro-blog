@@ -1,13 +1,18 @@
 
 <div class="about-user">
 	<h2 class="text-center"><%= @user.name %>'s Profile and Poetry</h2>
-	<p class="text-center">Email: <%= @user.email %></p>
-	<p><a href="/users/<%= @user.id %>/edit">Edit Settings</a></p>
+	<p class="text-center">Contact <%= @user.name %> at <%= @user.email %>.</p>
+	<div class="signed-in-user row">
+		<p class="col-sm-6 text-left"><a href="/users/<%= @user.id %>/edit">Edit Settings</a></p>
+		<form class="col-sm-6 text-right" method="POST" action="/logout">
+			<input type="submit" value="Log Out">
+		</form>
+	</div>
 </div>
 
 <div class="row">
 	<div class="user-post-frame col-sm-4">
-		<div class="user-post">
+		<div class="user-post signed-in-user">
 			<h3 class="post-title">Add a new <a href="/posts/new/<%= @user.id %>">poem</a>.</h3>
 		</div>
 	</div>

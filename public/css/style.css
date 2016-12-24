@@ -11,6 +11,9 @@ h1 {
   padding: 0px;
   margin: 0 auto; }
 
+a {
+  color: #FFFFFF; }
+
 .nav-bar {
   background-color: #99D3DF; }
 
@@ -30,5 +33,8 @@ h1 {
   padding: 20px;
   border: 1px solid #99D3DF;
   background-color: #CDCDCD; }
+
+.post-title {
+  color: #4981CE; }
 
 /*# sourceMappingURL=style.css.map */
