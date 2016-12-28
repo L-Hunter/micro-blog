@@ -110,7 +110,7 @@ end
 #see all users' posts and access links to user profile pages
 get '/posts' do
 	@users =User.all
-	@posts = Post.all
+	@posts = Post.all.reverse
 	erb :feed
 end
 

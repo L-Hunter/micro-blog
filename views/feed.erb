@@ -1,14 +1,19 @@
-<h2>All Users</h2>
-
+<div class="feed-users">
+<h2 class="feed-heading text-center">All Users</h2>
 <% @users.each do |user| %>
 	<a href="/users/<%= user.id %>"><%= user.name %></a>
 <% end %>
+</div>
 
-<hr>
+<div class="feed-posts">
+	<h2 class="feed-heading text-center">Most Recent Poetry</h2>
+	<% @posts.each do |post| %>
+		<div class="user-post-frame col-sm-4">
+			<div class="user-post">	
+				<h3 class="post-title"><%= post.title %></h3>
+				<p class="post-content"><%= post.content %></p>
+			</div>
+		</div>
+	<% end %>
 
-<h2>All Posts</h2>
-
-<% @posts.each do |post| %>
-	<h3><%= post.title %></h3>
-	<p><%= post.content %></p>
-<% end %>
+</div>
