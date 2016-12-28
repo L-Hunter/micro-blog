@@ -27,6 +27,7 @@ a {
 	color: #FFFFFF;
 }
 
+
 .nav-bar {
 	background-color: $tealish;
 }
@@ -44,16 +45,24 @@ a {
 
 .user-post-frame {
 	padding: 5px;
-	height: 200px;
+	height: 250px;
 }
 
 .user-post {
 	padding: 20px;
 	border: $line $tealish;
 	background-color: $dark-gray;
+	height: 100%;
 }
 
 .post-title {
 	color: $dark-blue;
 }
 
+.feed-users {
+	border-bottom: $line $pink;
+}
+
+.feed-heading {
+	color: $blue;
+}

@@ -16,14 +16,14 @@
 			<h3 class="post-title">Add a new <a href="/posts/new/<%= @user.id %>">poem</a>.</h3>
 		</div>
 	</div>
-	<% @user.posts.each do |post| %>
+	<% @user.posts.reverse_each do |post| %>
 		<div class="user-post-frame col-sm-4">
 			<div class="user-post">		
 				<h4 class="post-title"><%= post.title %></h4>
 				<p class="post-content"><%= post.content %></p>
 			</div>
 		</div>
-<% end %>
+	<% end %>
 </div>
 
 

@@ -27,14 +27,21 @@ a {
 
 .user-post-frame {
   padding: 5px;
-  height: 200px; }
+  height: 250px; }
 
 .user-post {
   padding: 20px;
   border: 1px solid #99D3DF;
-  background-color: #CDCDCD; }
+  background-color: #CDCDCD;
+  height: 100%; }
 
 .post-title {
   color: #4981CE; }
+
+.feed-users {
+  border-bottom: 1px solid #FA7C92; }
+
+.feed-heading {
+  color: #88BBD6; }
 
 /*# sourceMappingURL=style.css.map */
