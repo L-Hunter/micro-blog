@@ -28,6 +28,19 @@ a {
 	text-decoration: none;
 }
 
+.pink {
+	color: $pink;
+
+	a:hover {
+		text-decoration: none;
+		color: $pink;
+	}
+}
+
+
+.blue {
+	color: $blue;
+}
 
 .nav-bar {
 	background-color: $tealish;
@@ -35,20 +48,36 @@ a {
 
 .nav-link {
 	font-size: 20px;
-	list-style: none;
+	list-style-type: none;
 
 	a {
 		text-decoration: none;
-		display: block;
 		color: $pink;
 		font-weight: bold;
 		padding-left: 80px;
 		padding-bottom: 5px;
 	}
 }
+
 .wrapper {
 	width: 85%;
 	margin: 0 auto;
+}
+
+.profile-return {
+	text-align: right;
+	color: $pink;
+	font-size: 18px
+
+	a {
+		text-decoration: none;
+		color: $pink;
+	}
+
+	a:hover {
+		text-decoration: none;
+		color: $pink;
+	}
 }
 
 .about-user {

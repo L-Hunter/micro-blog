@@ -1,6 +1,21 @@
 
-<h1><%= @user.name %>'s Posts</h1>
-<% @posts.each do |post| %>
-	<h2><%= @post.title %></h2>
-	<p><%= @post.content %></p>
-<% end %>
+<div class="profile-return">
+	<a href="/users/<%= session[:user_id] %>" class="profile-return">Your Profile Page</a>
+</div>
+
+<div class="about-user">
+	<h2 class="text-center"><%= @user.name %>'s Profile and Poetry</h2>
+	<p class="text-center">Contact <%= @user.name %> at <%= @user.email %>.</p>
+
+</div>
+
+<div class="row">
+	<% @user.posts.each do |post| %>
+		<div class="user-post-frame col-sm-4">
+			<div class="user-post">		
+				<h4 class="post-title"><%= post.title %></h4>
+				<p class="post-content"><%= post.content %></p>
+			</div>
+		</div>
+	<% end %>
+</div>
