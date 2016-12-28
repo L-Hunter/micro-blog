@@ -8,14 +8,26 @@ form {
   color: #88BBD6; }
 
 h1 {
-  padding: 0px;
+  padding-top: 5px;
   margin: 0 auto; }
 
 a {
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  text-decoration: none; }
 
 .nav-bar {
   background-color: #99D3DF; }
+
+.nav-link {
+  font-size: 20px;
+  list-style: none; }
+  .nav-link a {
+    text-decoration: none;
+    display: block;
+    color: #FA7C92;
+    font-weight: bold;
+    padding-left: 80px;
+    padding-bottom: 5px; }
 
 .wrapper {
   width: 85%;
@@ -23,7 +35,20 @@ a {
 
 .about-user {
   color: #88BBD6;
-  border-bottom: 1px solid #FA7C92; }
+  border-bottom: 1px solid #FA7C92 a;
+    border-bottom-text-decoration: none; }
+  .about-user a:hover {
+    color: #88BBD6;
+    text-decoration: none; }
+
+.user-list {
+  text-align: center; }
+  .user-list a {
+    text-decoration: none;
+    font-size: 22px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #4981CE; }
 
 .user-post-frame {
   padding: 5px;
@@ -34,6 +59,9 @@ a {
   border: 1px solid #99D3DF;
   background-color: #CDCDCD;
   height: 100%; }
+  .user-post a:hover {
+    text-decoration: none;
+    color: #FFFFFF; }
 
 .post-title {
   color: #4981CE; }

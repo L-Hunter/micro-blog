@@ -1,8 +1,10 @@
 <div class="feed-users">
-<h2 class="feed-heading text-center">All Users</h2>
-<% @users.each do |user| %>
-	<a href="/users/<%= user.id %>"><%= user.name %></a>
-<% end %>
+	<h2 class="feed-heading text-center">All Users</h2>
+	<ul class="user-list">
+		<% @users.each do |user| %>
+			<a href="/users/<%= user.id %>"><%= user.name %></a>
+		<% end %>
+	</ul>
 </div>
 
 <div class="feed-posts">
