@@ -39,7 +39,6 @@ end
 #read - profile page
 get '/users/:id' do
 	@user = User.find(params['id'])
-	# @posts = @user.posts
 	erb :user
 end
 
@@ -71,16 +70,10 @@ post '/users/:id/delete' do
 	redirect "/"
 end
 
-#see access links other users' profiles
-# get '/users' do
-# 	@users =User.all
-# 	erb :feed
-# end
-
 #posting
 #get a user's posts
-get '/users/:id/posts' do
-	@user = User.find(params["user_id"])
+get '/users/posts/:id' do
+	@user = User.find(params["id"])
 	@posts = @user.posts
 	erb :"userposts"
 end
